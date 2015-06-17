@@ -1,4 +1,4 @@
-//很简单的动态规划，dp[i]表示到第i间房子能获得的最大利益
+//a simple dp 锛宒p[i] means the most profit you can get at ith house
 
 class Solution {
 public:
