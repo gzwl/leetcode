@@ -2,8 +2,7 @@ class Solution {
 public:
     string convertToTitle(int n) {
         string s;
-        while(n)
-        {
+        while(n){
             int t = n-1;
             t %= 26;
             char c = t + 'A';
