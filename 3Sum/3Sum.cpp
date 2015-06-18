@@ -1,3 +1,5 @@
+//time complexity O(n^2)
+
 class Solution {
 public:
     vector<vector<int> > threeSum(vector<int> &num) {
