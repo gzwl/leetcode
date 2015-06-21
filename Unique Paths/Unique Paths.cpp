@@ -2,7 +2,7 @@ class Solution {
 public:
     int uniquePaths(int m, int n) {
         if(!m || !n)    return 0;
-        int **dp = new int*[m];         //dp[i][j]表示到达(i,j)有多少种方法
+        int **dp = new int*[m];         //dp[i][j]琛ㄧず鍒拌揪(i,j)鐨勬柟娉曟暟
         for(int i = 0;i < m;i++){
             dp[i] = new int[n];
         }
