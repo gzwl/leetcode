@@ -9,7 +9,7 @@ public:
         int **vis = new int*[n];
         for(int i = 0;i < n;i++){
             vis[i] = new int[m];
-            for(int j = 0;j < m;j++)    vis[i][j] = 0;
+            for(int j = 0;j < m;j++)    vis[i][j] = 0;  //vis[i][j]表示(i,j)是否被搜索过
         }
         int res = 0;
         for(int i = 0;i < n;i++){
@@ -27,7 +27,7 @@ public:
     void dfs(vector<vector<char>>& grid,int **vis,int x,int y,int n,int m)
     {
         vis[x][y] = 1;
-        for(int i = 0;i < 4;i++){
+        for(int i = 0;i < 4;i++){       //往上下左右四个方向搜索
             int xt = x + dx[i];
             int yt = y + dy[i];
             if(xt >= 0 && xt < n && yt >= 0 && yt < m && grid[xt][yt] == '1' && !vis[xt][yt]){
