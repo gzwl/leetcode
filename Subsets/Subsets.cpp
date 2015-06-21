@@ -4,7 +4,7 @@ public:
         int n = S.size();
         sort(S.begin(),S.end());
         vector<vector<int> > res;
-        for(int s = 0;s < (1<<n);s++){      //¹²ÓÐ2^n¸ösubset£¬Ã¶¾Ù¾Í¿ÉÒÔÁË
+        for(int s = 0;s < (1<<n);s++){      //å…±æœ‰2^nä¸ªsubsetï¼Œæžšä¸¾å°±å¯ä»¥äº†
             vector<int> tmp;
             for(int i = 0;i < n;i++){
                 if(s & (1 << i))    tmp.push_back(S[i]);
