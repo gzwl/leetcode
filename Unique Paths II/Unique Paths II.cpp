@@ -5,7 +5,7 @@ public:
         int m = n ? obstacleGrid[0].size() : 0;
         if(!n)  return 0;
         int **dp = new int*[n];
-        for(int i = 0;i < n;i++)    dp[i] = new int[m];     //dp[i][j]表示到达(i,j)的方法数
+        for(int i = 0;i < n;i++)    dp[i] = new int[m];     //dp[i][j]琛ㄧず鍒拌揪(i,j)鐨勬柟娉曟暟
         for(int i = 0;i < n;i++){
             for(int j = 0;j < m;j++){
                 if(i == 0 && j == 0){
