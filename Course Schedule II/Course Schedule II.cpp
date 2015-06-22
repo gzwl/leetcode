@@ -1,4 +1,4 @@
-//��ʵ����I�ĳ����һ��
+//根据I的程序修改一下即可
 vector<int> G[1000];
 class Solution {
 public:
