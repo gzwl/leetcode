@@ -1,3 +1,5 @@
+//dp[i]表示到第i个字母时有多少种解法
+
 class Solution {
 public:
     int numDecodings(string s) {
