@@ -1,4 +1,10 @@
-//边表做法，比较慢
+/*
+    杩欓亾棰樺叾瀹炲氨鏄�氳繃鎷撴墤鎺掑簭鏉ュ垽鏂竴涓湁鍚戝浘鏈夋病鏈夌幆
+*/
+
+
+
+//杈硅〃鍋氭硶锛屾瘮杈冩參
 class Solution {
 public:
     bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
@@ -34,7 +40,7 @@ public:
 
 
 
-//临接表做法，要快很多
+//涓存帴琛ㄥ仛娉曪紝瑕佸揩寰堝
 vector<int> G[1000];
 class Solution {
 public:
