@@ -1,3 +1,8 @@
+/*
+    排序后从左右端点开始扫描
+    复杂度O(nlogn)
+*/
+
 class Solution {
 public:
     vector<int> twoSum(vector<int> &numbers, int target) {
