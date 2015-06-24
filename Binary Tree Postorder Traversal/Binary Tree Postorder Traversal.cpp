@@ -11,7 +11,7 @@
 struct node
 {
     TreeNode *p;
-    bool flag;      //flag±íÊ¾ÓĞÃ»ÓĞ·ÃÎÊ¹ıÓÒ×ÓÊ÷
+    bool flag;      //flagè¡¨ç¤ºæœ‰æ²¡æœ‰è®¿é—®è¿‡å³å­æ ‘
 };
 class Solution {
 public:
@@ -20,16 +20,16 @@ public:
         TreeNode *p = root;
         stack<node> s;
         while(1){
-            while(p){                       //×ó×ÓÊ÷ÈëÕ»
+            while(p){                       //å·¦å­æ ‘å…¥æ ˆ
                 s.push((node){p,0});
                 p = p->left;
             }
             if(s.empty())   break;
             node u = s.top();s.pop();
-            if(u.flag || (u.p)->right == NULL){         //·ÃÎÊ½Úµã±¾Éí
+            if(u.flag || (u.p)->right == NULL){         //è®¿é—®èŠ‚ç‚¹æœ¬èº«
                 res.push_back((u.p)->val);
             }
-            else{                           //ÓÒ×ÓÊ÷ÈëÕ»
+            else{                           //å³å­æ ‘å…¥æ ˆ
                 u.flag = 1;
                 s.push(u);
                 p = (u.p)->right;
@@ -38,3 +38,4 @@ public:
         return res;
     }
 };
+
