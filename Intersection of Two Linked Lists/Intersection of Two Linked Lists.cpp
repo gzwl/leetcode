@@ -21,7 +21,7 @@ public:
             pb = pb->next;
         }
         pa = headA,pb = headB;
-        while(lena > lenb){
+        while(lena > lenb){         //把两条链表移到同样长的位置，然后一个一个进行比较就可以了
             pa = pa->next;
             lena--;
         }
