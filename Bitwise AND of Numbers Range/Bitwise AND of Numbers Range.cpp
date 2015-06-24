@@ -16,3 +16,4 @@ public:
         return m << bit;
     }
 };
+
