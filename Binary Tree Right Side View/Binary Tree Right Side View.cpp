@@ -16,10 +16,10 @@ public:
         queue<TreeNode*> q;
         if(root)    q.push(root);
         while(q.size()){
-            TreeNode *p = q.front();    //Ã¿´ÎÈ¡³ö×îÓÒ±ßµÄµã¼ÓÈëres
+            TreeNode *p = q.front();    //æ¯æ¬¡å–å‡ºæœ€å³è¾¹çš„ç‚¹åŠ å…¥res
             res.push_back(p->val);
             int cnt = q.size();
-            while(cnt--){       //Çå³ıÕâÒ»²ãµÄµã£¬²¢°ÑÏÂÒ»²ãµÄµã´ÓÓÒµ½×ó¼ÓÈë¶ÓÁĞ
+            while(cnt--){       //æ¸…é™¤è¿™ä¸€å±‚çš„ç‚¹ï¼Œå¹¶æŠŠä¸‹ä¸€å±‚çš„ç‚¹ä»å³åˆ°å·¦åŠ å…¥é˜Ÿåˆ—
                 p = q.front();
                 q.pop();
                 if(p->right)    q.push(p->right);
@@ -29,3 +29,4 @@ public:
         return res;
     }
 };
+
