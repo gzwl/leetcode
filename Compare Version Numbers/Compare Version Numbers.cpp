@@ -15,8 +15,9 @@ public:
             i++;
             j++;
             if(num1 > num2)     return 1;
-            if(num1 < num2)   return -1;
+            if(num1 < num2)     return -1;
         }
         return 0;
     }
 };
+
