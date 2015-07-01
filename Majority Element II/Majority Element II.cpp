@@ -1,30 +1,30 @@
 /*
-    ÓÃres1ºÍres2Î¬»¤Á½¸ö¿ÉÄÜµÄ½â
-    cnt1ºÍcnt2±íÊ¾ËüÃÇµÄ¾»¸öÊı£¬Èç¹ûÓĞ³¬¹ın/3µÄÊı£¬ÄÇÃ´ËüµÄ¾»¸öÊıÒ»¶¨ÊÇ´óÓÚ0µÄ
-    Ê±¼ä¸´ÔÓ¶ÈO(n)
-    ¿Õ¼ä¸´ÔÓ¶ÈO(1)
+    ç”¨res1å’Œres2ç»´æŠ¤ä¸¤ä¸ªå¯èƒ½çš„è§£
+    cnt1å’Œcnt2è¡¨ç¤ºå®ƒä»¬çš„å‡€ä¸ªæ•°ï¼Œå¦‚æœæœ‰è¶…è¿‡n/3çš„æ•°ï¼Œé‚£ä¹ˆå®ƒçš„å‡€ä¸ªæ•°ä¸€å®šæ˜¯å¤§äº0çš„
+    æ—¶é—´å¤æ‚åº¦O(n)
+    ç©ºé—´å¤æ‚åº¦O(1)
 */
 
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
-        int res1,res2;                      //³öÏÖ´ÎÊı´óÓÚn/3£¬×î¶àÖ»¿ÉÄÜÓĞÁ½¸ö½âres1,res2
-        int cnt1 = 0,cnt2 = 0;              //¾»¸öÊı
+        int res1,res2;                      //å‡ºç°æ¬¡æ•°å¤§äºn/3ï¼Œæœ€å¤šåªå¯èƒ½æœ‰ä¸¤ä¸ªè§£res1,res2
+        int cnt1 = 0,cnt2 = 0;              //å‡€ä¸ªæ•°
         for(int i = 0;i < nums.size();i++){
-            if(cnt1 && nums[i] == res1)     cnt1++;         //µ±Ç°ÊıºÍres1ÏàÍ¬
-            else if(cnt2 && nums[i] == res2)    cnt2++;     //µ±Ç°ÊıºÍres2ÏàÍ¬
-            else if(cnt1 == 0){                             //res1Ã»´æÊı
+            if(cnt1 && nums[i] == res1)     cnt1++;         //å½“å‰æ•°å’Œres1ç›¸åŒ
+            else if(cnt2 && nums[i] == res2)    cnt2++;     //å½“å‰æ•°å’Œres2ç›¸åŒ
+            else if(cnt1 == 0){                             //res1æ²¡å­˜æ•°
                 res1 = nums[i];cnt1++;
             }
-            else if(cnt2 == 0){                             //res2Ã»´æÊı
+            else if(cnt2 == 0){                             //res2æ²¡å­˜æ•°
                 res2 = nums[i];cnt2++;
             }
-            else{                                           //µ±Ç°ÊıºÍres1,res2¾ù²»Í¬
+            else{                                           //å½“å‰æ•°å’Œres1,res2å‡ä¸åŒ
                 cnt1--;cnt2--;
             }
         }
-        //ÉÏÃæµÃµ½µÄÊÇ¿ÉÄÜµÄÁ½¸ö½âres1,res2,ÏÖÔÚÑéÖ¤ÕâÁ½¸ö½â
-        int sum1 = 0,sum2 = 0;                      //sum1,sum2·Ö±ğÎªres1ºÍres2ÔÚÊı×éÖĞ³öÏÖµÄ´ÎÊı
+        //ä¸Šé¢å¾—åˆ°çš„æ˜¯å¯èƒ½çš„ä¸¤ä¸ªè§£res1,res2,ç°åœ¨éªŒè¯è¿™ä¸¤ä¸ªè§£
+        int sum1 = 0,sum2 = 0;                      //sum1,sum2åˆ†åˆ«ä¸ºres1å’Œres2åœ¨æ•°ç»„ä¸­å‡ºç°çš„æ¬¡æ•°
         for(int i = 0;i < nums.size();i++){
             if(cnt1 && nums[i] == res1)     sum1++;
             if(cnt2 && nums[i] == res2)     sum2++;
@@ -35,4 +35,5 @@ public:
         return res;
     }
 };
+
 
