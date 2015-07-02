@@ -35,3 +35,4 @@ public:
         if(col)    for(int i = 1;i < m;i++)    matrix[0][i] = 0;
     }
 };
+
