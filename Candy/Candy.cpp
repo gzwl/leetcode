@@ -38,5 +38,6 @@ public:
         delete [] cost;
         return res;
     }
+    
 };
 
