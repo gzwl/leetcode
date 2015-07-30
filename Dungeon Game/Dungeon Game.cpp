@@ -22,7 +22,7 @@ public:
         }
         int res = dp[0][0];
         for(int i = 0;i < n;i++)    delete [] dp[i];
-        delete dp;
+        delete [] dp;
         return res;
     }
 };
