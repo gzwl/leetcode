@@ -25,7 +25,7 @@ public:
             }
         }
         int res = dp[n][m];
-        for(int i = 0;i < n;i++)    delete [] dp[i];
+        for(int i = 0;i <= n;i++)    delete [] dp[i];
         delete [] dp;
         return res;
     }
