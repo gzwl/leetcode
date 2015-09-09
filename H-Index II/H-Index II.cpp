@@ -1,12 +1,11 @@
 /*
-    首先对citations进行排序，然后二分枚举答案h
-    time O(nlogn)
+    和I一样，二分枚举答案h
+    time O(logn)
 */
 
 class Solution {
 public:
     int hIndex(vector<int>& citations) {
-        sort(citations.begin(),citations.end());
         int n = citations.size();
         if(n == 0)  return 0;
         int lhs = 1,rhs = n + 1;
@@ -22,3 +21,4 @@ public:
         return res;
     }
 };
+
