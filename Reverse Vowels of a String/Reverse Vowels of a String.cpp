@@ -1,6 +1,6 @@
 /*
     比较简单的问题，从两边开始一起扫，然后发现是元音字母就交换即可。
-    time O(n) space O(k)
+    time O(n) space O(1)
 */
 
 class Solution {
