@@ -1,5 +1,5 @@
 # leetcode
-The optimum C++  solutions for the leetcode
+The optimum C++  solutions of the leetcode problem
 
 这是我自己写的leetcode的题解，目前已经完成了70%左右，后续部分会很快更新
 
