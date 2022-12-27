@@ -1,0 +1,15 @@
+    int maxSubArray(vector<int>& nums) {
+        int cursum=0;
+        int ls=0;
+        int maxe=INT_MIN;
+        for(int i=0;i<nums.size();i++)
+        {
+            cursum += nums[i];
+            cursum = max(0,cursum);
+            ls = max(ls,cursum);
+            maxe = max(nums[i],maxe);
+        }
+        return (maxe<0)?maxe:ls;
+        
+        
+    }
